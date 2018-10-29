@@ -1,0 +1,14 @@
+*.iml
+*.class
+.gradle
+/key.jks
+/key.properties
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+GeneratedPluginRegistrant.java
+/.idea/caches
+/app/build
+/app/.externalNativeBuild
