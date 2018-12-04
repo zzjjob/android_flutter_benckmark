@@ -13,3 +13,5 @@ build/
 *.log
 
 README.md
+
+pubspec.lock
