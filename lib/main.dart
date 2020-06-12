@@ -60,7 +60,7 @@ class MyPage extends StatelessWidget {
   }
 
 
-  void runBenchmark() {
+  void runBenchmark() async {
     group('benchmark_harness', () {
       test('run is called', () {
         List<BenchmarkBase> benchmarks = [];
@@ -80,7 +80,7 @@ class MyPage extends StatelessWidget {
     });
   }
 
-  void extractScores(BenchmarkBase benchmark) {
+  void extractScores(BenchmarkBase benchmark) async {
     List<double> scores = [];
     List<double> elapsedUs = [];
 

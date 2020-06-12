@@ -15,3 +15,7 @@ build/
 README.md
 
 pubspec.lock
+
+**/.project
+**/.settings
+**/.classpath

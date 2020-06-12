@@ -14,6 +14,9 @@ import defrac.benchmark.Havlak;
 import defrac.benchmark.Richards;
 import defrac.benchmark.Tracer;
 import defrac.benchmark.AllBenchmarks;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.dart.DartExecutor;
+import io.flutter.view.FlutterMain;
 
 
 public class TestActivity extends Activity {
@@ -50,7 +53,14 @@ public class TestActivity extends Activity {
     }
 
     public void onClickFlutter(View view) {
-        startActivity(new Intent(this, MainActivity.class));
+//        startActivity(new Intent(this, MainActivity.class));
+        FlutterMain.startInitialization(this);
+        FlutterMain.ensureInitializationComplete(this, null);
+
+        FlutterEngine engine = new FlutterEngine(this);
+        engine.getDartExecutor().executeDartEntrypoint(
+                DartExecutor.DartEntrypoint.createDefault()
+        );
     }
 
     public void onClickJava(View view) {
